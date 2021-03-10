@@ -8,7 +8,8 @@ int main() {
 	printf("How many numbers will you enter?\t");
 	scanf("%d", &how_many);
 	puts("");
-  
+        puts("");
+
 	while(how_many != 0) {
 	    printf("Enter an integer:\t");
 	    scanf("%d", &number);
@@ -21,7 +22,6 @@ int main() {
             max2 = number;  //assigning new max2 value
         }
         
-      puts("");
 	    how_many--;
 	}
 	printf("Two largest numbers are: %d and %d.\n", max1, max2);
