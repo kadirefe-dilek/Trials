@@ -13,7 +13,7 @@ int main (void) {
 	puts("Enter the number to be tested: ");
 	scanf("%d", &number);
 	
-	if(isFibo(number) == 1) {
+	if(isFibo(number) == 1) {	//calls the function to test the case
         printf("%d is a fibonacci number.\n", number);
 	}	 
 	else {
@@ -25,18 +25,18 @@ int main (void) {
 }	
 
 int isFibo(int f) {
-	int temp;
-	int a = 0;
-	int b = 1;
-	int status = 0;
+	int temp;	//holds the next number temporarily in the sequence 
+	int a = 0;	//nth fibonacci number
+	int b = 1;	//(n+1)th fibonacci number 
+	int status = 0;	//last status of the given number to be returned by the function. İnitially, choosen as zero to provide control in the main.
 	
-	for(int i = 0; i < 20; i++) {
-    	temp = a + b;
-    	a = b;
-    	b = temp;
+	for(int i = 0; i < 20; i++) {	//
+    	temp = a + b;	//creating the next number in the sequence
+    	a = b;		
+    	b = temp;	//shifting the positions of numbers
     	
- 	    if(f == a) {
-	        status = 1;
+ 	    if(f == a || f == 0) {	//testing the case
+	        status = 1;		//initializing to one to provide control in the main. 
 	    }
 	    
 	}
